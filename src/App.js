@@ -71,17 +71,7 @@ async function fetchNotes() {
         type="file"
         onChange={onChange}
       />
-      <div style={{marginBottom: 30}}>
-        {
-          notes.map(note => (
-            <div key={note.id || note.name}>
-              <h2>{note.name}</h2>
-              <p>{note.description}</p>
-              <button onClick={() => deleteNote(note)}>Delete note</button>
-            </div>
-          ))
-        }
-      </div>
+      
       <AmplifySignOut />
       {
   notes.map(note => (
